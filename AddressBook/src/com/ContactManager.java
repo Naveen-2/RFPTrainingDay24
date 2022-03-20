@@ -80,4 +80,15 @@ public class ContactManager {
         return false;
     }
 
+    public boolean searchPerson(String name){
+        for (Contact contact : contactList) {
+            if (name.equalsIgnoreCase(contact.firstName)) {
+                System.out.println("Contact available");
+                return true;
+            }
+        }
+        System.out.println("Contact not available");
+        return false;
+    }
+
 }

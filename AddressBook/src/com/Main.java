@@ -17,10 +17,11 @@ public class Main {
             int choice = userMenu.showMainMenu();
             switch (choice) {
                 case 1 -> contactManager.addNewContact();
-                case 2 -> contactManager.editByName(ScannerUtil.getString("Enter contact name to edit"));
-                case 3 -> contactManager.deleteContact(ScannerUtil.getString("Enter contact name to delete"));
+                case 2 -> contactManager.editByName(ScannerUtil.getString("Enter contact name to edit: "));
+                case 3 -> contactManager.deleteContact(ScannerUtil.getString("Enter contact name to delete: "));
                 case 4 -> addressBook = contactManager.addMultipleContacts();
-                case 5 -> addressBookManager.addAddressBook(ScannerUtil.getString("Enter name of Address Book"), addressBook);
+                case 5 -> addressBookManager.addAddressBook(ScannerUtil.getString("Enter name of Address Book: "), addressBook);
+                case 6 -> contactManager.searchPerson(ScannerUtil.getString("Enter contact name to search: "));
                 default -> {
                 }
             }

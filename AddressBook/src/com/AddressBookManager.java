@@ -5,7 +5,7 @@ import java.util.List;
 
 public class AddressBookManager {
     public Hashtable<String, List<Contact>> addAddressBook(String name, List<Contact> addressBook) {
-        Hashtable<String, List<Contact>> addressBookDict = new Hashtable<String, List<Contact>>();
+        Hashtable<String, List<Contact>> addressBookDict = new Hashtable<>();
         ContactManager contactManager = new ContactManager();
         String  opt = "a";
         do {
@@ -14,4 +14,5 @@ public class AddressBookManager {
         } while (opt.equalsIgnoreCase("A"));
         return addressBookDict;
     }
+    
 }
